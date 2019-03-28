@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" type="text/css" href="/assets/style.css">
+    <title>Twitter Clone</title>
+<style>
+    
+</style>
+<script>  
+    function checkSubmit(e) {
+      var n = document.getElementById("tweet-input").value.length;
+      if(n && (e && e.keyCode == 13)) {
+          document.forms[0].submit();
+      }
+    }
+</script>
+</head>
+<body>
+    <header>
+        <img src="/assets/img/twitter.png" alt="twitter-logo">
+    </header>
+    <nav></nav>
+    <div class="main">
+        <aside>
+            <div class="img"></div>
+            <div class="background"></div>
+            <div class="info">
+                <div class="name">
+                    <span>John Smith</span>
+                    <h2>@johnSmith</h2>
+                </div>
+                <div class="twitter-count">
+                    <span>Tweets<br/></span>
+                    <% var count = 0; %>
+                    <%for(var i=0; i<tweets.length; i++){ %>
+                        <% count++ %>
+                    <%}%>
+                    <span id="count"><%= count %></span>        
+                </div>
+            </div>
+        </aside>
+        <section>
+            <div class="twitter-post">
+                <div class="column">
+                    <div class="twitter-post--img"></div>
+                    <form action="/newtweet" method="POST" id="textarea"  onKeyPress="return checkSubmit(event)">
+                        <textarea required class="input" name="item" id="tweet-input" cols="90" placeholder="What's happening?"></textarea>
+                        <input class="tweet-button" type="submit" value="Tweet">
+                    </form>      
+                </div>
+            </div>
+            <%for(var i=0; i<tweets.length; i++){ %>
+            <div class="twitter-status">
+              <div class="twitter-status--img"></div>
+              <div class="twitter-status--msg">
+                  <span>John Smith</span>
+                  <h2>@johnSmith</h2>
+                  <h2> <%=tweets[i][1]%></h2>
+                  <p><%=tweets[i][0]%> </p>
+              </div>
+            </div>
+            <%}%>
+        </section>
+    </div>
+</body>
+</html>

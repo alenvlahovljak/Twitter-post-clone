@@ -1,0 +1,250 @@
+*,
+*::after,
+*::before{
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; 
+}
+
+textarea::-webkit-input-placeholder {
+  color: #0bf;
+}
+
+textarea:-moz-placeholder { /* Firefox 18- */
+  color: #0bf;  
+}
+
+textarea::-moz-placeholder {  /* Firefox 19+ */
+  color: #0bf;  
+}
+
+textarea:-ms-input-placeholder {
+  color: #0bf;  
+}
+
+textarea::placeholder {
+  color: #0bf;  
+}
+
+html{
+  font-size: 62.5%; /* 1rem = 10px */
+  height: 100%;
+}
+
+body{
+  height: 100%;
+  box-sizing: border-box; 
+  font-family: "Segoe UI",Arial,sans-serif;
+  font-weight: 400;
+  background-color: #e6ecf0;
+  /*font-size: 16px;*/
+}
+
+header{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    background-color: white;
+    border-bottom: rgb(166, 170, 173) 2px solid;
+    justify-content: center;
+    align-items: center;
+}
+
+header img{
+    height: 50%;
+}
+
+nav{
+    width: 100%;
+    background-color: #e6ecf0;
+    height: 30px;
+}
+
+.main{
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+aside{
+    margin: 1rem;
+    flex-basis: 30rem; 
+    flex-shrink: 0;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    height: 300px;
+}
+
+section{
+    flex-basis: 78rem;
+    margin: 1rem 2rem;
+}
+
+.img{
+  width: 40%;
+  height: 40%;
+  top: 20%;
+  left: 5%;
+  transform: translate(-5%);
+  border-radius: 50%;
+  border: 3px solid white;
+  background-image: url("img/john.jpg");
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+}
+
+.name{
+  width: 50%;
+  height: 20%;
+  top: 40%;
+  right: 3%;
+  position: absolute;
+}
+
+.background{
+  height: 40%;
+  background-color: #00acee;
+}
+
+.info{
+  height: 60%;
+  background-color: white;
+}
+
+span{
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+h2{
+  color: grey;
+}
+
+.twitter-count{
+  position: absolute;
+  bottom: 10%;
+  left: 5%;
+}
+
+.twitter-count span:first-child{
+  color: #00acee;
+}
+
+.twitter-count span:last-child{
+  color: gray;
+}
+
+.twitter-post{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: #E8F5FD;   
+}
+
+.column{
+  margin: 2rem;
+}
+
+.twitter-post--img{
+  background-image: url("img/twitter-post-img.png");
+  background-position: center;
+  background-size: cover;
+  height: 5rem;
+  width: 5rem;
+  display: inline-block;
+  vertical-align: top;
+  border-radius: 50%;
+}
+
+.input{
+  width: 90%;
+  margin-left: 2rem;
+  border: #00acee 0.5px solid;
+  outline: none;
+  min-height: 10rem;
+  border-radius: 10px;
+  padding: 1rem;
+  font-family: "Segoe UI",Arial,sans-serif;
+  /*resize:vertical;*/
+  resize:none;
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+.input:focus{
+  border: #00acee 2.5px solid;
+}
+
+.tweet-button{
+  align-self: center;
+  padding: 0.6rem 1.6rem;
+  margin: 1rem 0 2rem 82%;
+  text-align: right;
+  display: inline;
+  border-radius: 10px;
+  outline: none;
+  border: 0;
+  background-color: #4AB3F4;
+  font-weight: bold;
+  font-size: 1.4rem;
+  font-weight: bold;
+  line-height: 2rem;
+  color: white;
+  cursor: pointer;
+}
+
+.twitter-status{
+    display: flex;
+    border-bottom: 2px solid #E8F5FD;  ;
+    background-color: white;
+}
+
+form{
+  width:90%;
+  display: inline-block;
+}
+
+.twitter-status--img{
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 1rem;
+  background-color: gray;
+  vertical-align: center;
+}
+
+.twitter-status--img{
+  background-image: url("img/john.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.twitter-status--msg{
+  display: inline-block;
+  width: 85%;
+  margin: 1rem;
+}
+
+.twitter-status--msg span{
+  display: inline;
+  padding-left: 1rem;
+}
+
+.twitter-status--msg h2{
+  display: inline;
+  padding-left: 1rem;
+}
+
+.twitter-status--msg p{
+  margin: 1rem;
+  font-size: 1.8rem;
+}
+
+.twitter-status--msg h2:nth-child(3)::before{
+  content: "|";
+}
